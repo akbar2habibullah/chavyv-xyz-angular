@@ -1,0 +1,22 @@
+<section class="space-y-4 mb-10">
+  <h2 class="text-3xl font-medium">My Technical Skills :</h2>
+
+  <div *ngFor="let skill of skills" class="space-y-4">
+    <div>
+      <div class="w-100 bg-[#ddd]">
+        <div
+          style="
+            width: {{ skill.percentage }}%; 
+            background-color: {{ skill.color.hex }};
+          "
+          class="text-right text-white py-px"
+        >
+          {{ skill.percentage }}%
+        </div>
+      </div>
+      <p class="text-left">
+        {{ skill.title }}
+      </p>
+    </div>
+  </div>
+</section>

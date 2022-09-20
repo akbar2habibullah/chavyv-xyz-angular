@@ -1,0 +1,29 @@
+<div
+  id="resume"
+  class="flex flex-col items-center space-y-5 px-4 py-8 md:px-12 md:py-16 mb-10 bg-[#e9ecef] dark:bg-dark-shade-gray rounded-lg"
+>
+  <img
+    src="{{ image }}"
+    class="rounded-full w-72 h-72 aspect-square"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <h2 class="font-light text-7xl">
+    Hello, my name is
+    <span class="text-secondary-dark-color text-medium">Habib</span>ullah Akbar!
+  </h2>
+  <h3 class="font-medium text-3xl">
+    but you can call me <span class="text-secondary-dark-color">Habib</span>
+  </h3>
+  <div
+    [innerHTML]="introduction"
+    class="[&>p>strong]:text-secondary-dark-color [&>p>strong]:font-medium space-y-4"
+  ></div>
+  <a
+    href="{{ resumeLink }}"
+    rel="noreferrer"
+    target="_blank"
+    class="px-3 py-1.5 font-normal text-base rounded text-main-light-color dark:text-dark-charcoal bg-secondary-dark-color hover:text-secondary-dark-color dark:hover:text-secondary-dark-color hover:bg-transparent transition-all ease-in"
+    >Get my Resume</a
+  >
+</div>

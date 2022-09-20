@@ -1,0 +1,50 @@
+<section id="contacts">
+  <h2 class="font-medium text-3xl">You can reach me with:</h2>
+  <div
+    class="flex flex-wrap justify-center text-secondary-dark-color max-w-sm md:max-w-lg mx-auto my-5"
+  >
+    <a
+      href="mailto:{{ contactsInfo.email }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+    >
+      <fa-icon [icon]="envelope" size="3x"></fa-icon
+    ></a>
+    <a
+      href="https://instagram.com/{{ contactsInfo.instagram }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+      ><fa-icon [icon]="instagram" size="3x"></fa-icon
+    ></a>
+    <a
+      href="https://twitter.com/{{ contactsInfo.twitter }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+      ><fa-icon [icon]="twitter" size="3x"></fa-icon
+    ></a>
+    <a
+      href="{{ contactsInfo.linkedinURL }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+      ><fa-icon [icon]="linkedin" size="3x"></fa-icon
+    ></a>
+    <a
+      href="https://github.com/{{ contactsInfo.github }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+      ><fa-icon [icon]="github" size="3x"></fa-icon
+    ></a>
+    <a
+      href="https://gitlab.com/{{ contactsInfo.gitlab }}"
+      rel="noreferrer"
+      target="_blank"
+      class="hover:text-main-dark-color dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+      ><fa-icon [icon]="gitlab" size="3x"></fa-icon
+    ></a>
+  </div>
+</section>
