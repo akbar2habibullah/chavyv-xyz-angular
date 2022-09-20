@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: "14"
       - run: npm install
-      - run: ng build
+      - run: npm run build
   build-scully:
     runs-on: ubuntu-latest
     needs: [build-angular]

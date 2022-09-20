@@ -34,7 +34,6 @@
     "@scullyio/platform-server": "^2.1.0",
     "@scullyio/scully": "^2.1.36",
     "@scullyio/scully-plugin-playwright": "^2.1.36",
-    "@scullyio/scully-plugin-puppeteer": "^2.1.36",
     "apollo-angular": "^4.0.1",
     "graphql": "^16.6.0",
     "playwright": "^1.26.0",
