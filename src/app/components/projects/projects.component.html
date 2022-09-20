@@ -1,7 +1,12 @@
 <section id="projects" class="mb-10 space-y-4">
   <h2 class="text-3xl font-medium">My Several Projects:</h2>
   <div *ngFor="let project of projects" class="relative">
-    <img src="{{ project.picture[0].url }}" />
+    <img
+      src="{{ project.picture[0].url }}"
+      alt="{{ project.title }} screenshoot"
+      width="640"
+      height="308"
+    />
     <div class="bg-transparent w-100 h-[300px] absolute"></div>
     <div (mouseover)="mouseOver(project.id)" (mouseleave)="mouseOut()">
       <div
