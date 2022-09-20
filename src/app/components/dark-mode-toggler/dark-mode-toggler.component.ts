@@ -11,7 +11,7 @@ export class DarkModeTogglerComponent implements OnInit {
   faMoon = faMoon;
   icon = this.faMoon;
 
-  @Input() isDarkEnabled = false;
+  @Input() isDarkEnabled = true;
   @Output() toggleDarkModeEvent = new EventEmitter<boolean>();
 
   toggleDarkMode() {

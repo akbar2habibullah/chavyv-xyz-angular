@@ -1,6 +1,6 @@
 <div
   id="resume"
-  class="flex flex-col items-center space-y-5 px-4 py-8 md:px-12 md:py-16 mb-10 bg-[#e9ecef] dark:bg-dark-shade-gray rounded-lg"
+  class="flex flex-col items-center space-y-5 px-4 py-8 md:px-12 md:py-16 mb-10 bg-[#e9ecef] dark:bg-dark-shade-gray rounded-lg dark:text-white"
 >
   <img
     src="{{ image }}"
@@ -11,14 +11,16 @@
   />
   <h2 class="font-light text-7xl">
     Hello, my name is
-    <span class="text-secondary-dark-color text-medium">Habib</span>ullah Akbar!
+    <span class="text-secondary-dark-color bg:black text-medium">Habib</span
+    >ullah Akbar!
   </h2>
   <h3 class="font-medium text-3xl">
-    but you can call me <span class="text-secondary-dark-color">Habib</span>
+    but you can call me
+    <span class="text-secondary-dark-color bg:black">Habib</span>
   </h3>
   <div
     [innerHTML]="introduction"
-    class="[&>p>strong]:text-secondary-dark-color [&>p>strong]:font-medium space-y-4"
+    class="[&>p>strong]:text-secondary-dark-color [&>p>strong]:font-medium [&>p>strong]:bg-black space-y-4"
   ></div>
   <a
     href="{{ resumeLink }}"
