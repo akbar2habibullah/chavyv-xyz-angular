@@ -17,6 +17,7 @@ jobs:
       - run: ng build
   build-scully:
     runs-on: ubuntu-latest
+    needs: [build-angular]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
