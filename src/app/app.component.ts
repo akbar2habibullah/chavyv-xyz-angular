@@ -16,7 +16,7 @@ export class AppComponent {
   error: any = null;
   data: any = null;
 
-  isDarkEnabled: boolean = false;
+  isDarkEnabled: boolean = true;
 
   toggleDarkMode = (): void => {
     this.isDarkEnabled = !this.isDarkEnabled;
