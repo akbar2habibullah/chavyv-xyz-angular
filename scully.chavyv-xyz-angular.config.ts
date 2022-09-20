@@ -1,5 +1,5 @@
 import { ScullyConfig } from '@scullyio/scully';
-import '@scullyio/scully-plugin-puppeteer';
+import '@scullyio/scully-plugin-playwright';
 
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -8,5 +8,4 @@ export const config: ScullyConfig = {
   outDir: './dist/static', // directory for scully build artifacts
   defaultPostRenderers: [],
   routes: {},
-  puppeteerLaunchOptions: { executablePath: CHROMIUM_PATH },
 };
