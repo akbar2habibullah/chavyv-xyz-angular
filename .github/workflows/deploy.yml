@@ -6,7 +6,7 @@ on:
   push:
     branches: [master]
 jobs:
-  build-angular-and-scully:
+  build-angular-and-scully-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,12 +16,6 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run scully
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [build-angular-and-scully]
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
       - run: npm install --global vercel@latest
       - run: cd dist/static
       - run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
