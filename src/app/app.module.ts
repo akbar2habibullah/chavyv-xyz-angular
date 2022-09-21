@@ -25,6 +25,7 @@ import { TimelinesComponent } from './components/timelines/timelines.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
 import { environment } from 'src/environments/environment.variables';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,12 @@ import { environment } from 'src/environments/environment.variables';
     FontAwesomeModule,
     ScullyLibModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: true,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [
     {

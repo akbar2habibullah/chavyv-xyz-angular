@@ -64,5 +64,9 @@ export const environment = {
       name: 'author',
       content: 'Habibullah Akbar',
     },
+    {
+      name: 'theme-color',
+      content: '#444', // Set a custom theme color for the address bar
+    },
   ],
 };
