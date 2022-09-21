@@ -33,6 +33,7 @@ import {
 export class ProjectsComponent implements OnInit {
   @Input() projects: any[] = [];
 
+  show = false;
   hoverId = '';
 
   mouseOver(projectId: string) {
@@ -41,6 +42,10 @@ export class ProjectsComponent implements OnInit {
 
   mouseOut() {
     this.hoverId = '';
+  }
+
+  toggleShow() {
+    this.show = !this.show;
   }
 
   constructor() {}

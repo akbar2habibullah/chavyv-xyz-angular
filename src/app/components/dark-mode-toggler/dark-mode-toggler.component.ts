@@ -9,7 +9,7 @@ import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons';
 export class DarkModeTogglerComponent implements OnInit {
   faSun = faSun;
   faMoon = faMoon;
-  icon = this.faMoon;
+  icon = this.faSun;
 
   @Input() isDarkEnabled = true;
   @Output() toggleDarkModeEvent = new EventEmitter<boolean>();

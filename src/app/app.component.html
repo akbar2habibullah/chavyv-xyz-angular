@@ -4,10 +4,6 @@
   >
     <app-top-line></app-top-line>
     <div class="max-w-2xl flex flex-col p-4 mx-auto">
-      <app-dark-mode-toggler
-        (toggleDarkModeEvent)="toggleDarkMode()"
-        [isDarkEnabled]="isDarkEnabled"
-      ></app-dark-mode-toggler>
       <app-header></app-header>
       <app-cover></app-cover>
       <div *ngIf="data">
