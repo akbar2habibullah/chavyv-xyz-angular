@@ -1,27 +1,7 @@
-# ChavyvXyzAngular
+# Chavyv.xyz Angular based project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+This project was built by [Angular](https://angular.io/), [NgRx](https://ngrx.io/) (State management), [Tailwind](https://tailwindcss.com/) (UI kit), [Hygraph](https://hygraph.com/) (Headless CMS), [Apollo](https://www.apollographql.com/) (GraphQL client), [Scully](https://scully.io/) (SSG Enabler), [Playwright](https://playwright.dev/) (Browser automation), and [GitHub Actions](https://github.com/features/actions) (CI/CD). There's some customization from default use of some modules such as using Playwright instead of Puppeteer for Scully browser automation. Build the SSG on Github Actions for prevent exceeding bundle size limit hobby account on Vercel.
 
-## Development server
+## customization
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I've created the [`environment.variable.ts`](https://github.com/akbar2habibullah/chavyv-xyz-angular/blob/master/src/environments/environment.variables.ts) in environment directory for easier customization. But it's just for the variables inside the Angular app. I'll create more comprehensives guides next time.
