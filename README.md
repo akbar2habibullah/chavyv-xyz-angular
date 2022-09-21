@@ -1,6 +1,6 @@
 # Chavyv.xyz Angular based project
 
-This project was built by [Angular](https://angular.io/), [NgRx](https://ngrx.io/) (State management), [Tailwind](https://tailwindcss.com/) (UI kit), [Hygraph](https://hygraph.com/) (Headless CMS), [Apollo](https://www.apollographql.com/) (GraphQL client), [Scully](https://scully.io/) (SSG Enabler), [Playwright](https://playwright.dev/) (Browser automation), and [GitHub Actions](https://github.com/features/actions) (CI/CD). There's some customization from default use of some modules such as using Playwright instead of Puppeteer for Scully browser automation. Build the SSG on Github Actions for prevent exceeding bundle size limit hobby account on Vercel.
+This project was built by [Angular](https://angular.io/), [NgRx](https://ngrx.io/) (State management), [Tailwind](https://tailwindcss.com/) (UI kit), [Hygraph](https://hygraph.com/) (Headless CMS), [Apollo](https://www.apollographql.com/) (GraphQL client), [Scully](https://scully.io/) (SSG Enabler), [Playwright](https://playwright.dev/) (Browser automation), and [GitHub Actions](https://github.com/features/actions) (CI/CD). There's some customization from default use of some modules such as using Playwright instead of Puppeteer for Scully browser automation and build the SSG on Github Actions for prevent exceeding bundle size limit hobby account on Vercel.
 
 ## customization
 
