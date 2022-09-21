@@ -6,4 +6,5 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  text-align: center;
 }

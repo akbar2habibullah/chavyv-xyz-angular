@@ -16,12 +16,6 @@ export class AppComponent {
   error: any = null;
   data: any = null;
 
-  isDarkEnabled: boolean = true;
-
-  toggleDarkMode = (): void => {
-    this.isDarkEnabled = !this.isDarkEnabled;
-  };
-
   constructor(
     private store: Store<{ loading: boolean; data: any; error: string }>,
     private meta: Meta
