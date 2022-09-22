@@ -20,6 +20,6 @@ jobs:
       - run: npm run build
       - run: npm run scully
       - name: Run both scully serve and custom build
-      - run: |
+        run: |
           npm run scully:serve
           node CustomBuildReducer.mjs && vercel deploy dist/static-coveraged --prod --token=${{ secrets.VERCEL_TOKEN }}
