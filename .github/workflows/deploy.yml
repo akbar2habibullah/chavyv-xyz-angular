@@ -15,17 +15,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - name: Build Angular and scully
-        shell: bash
-        run: |
-          npm install
-          npm run build
-          npm run scully
+      - run: npm install --global vercel@latest
+      - run: npm install
+      - run: npm run build
+      - run: npm run scully
+      - name: Run both scully serve and custom build
+      - run: |
           npm run scully:serve
-      - name: Custom Build and deploy
-        shell: bash
-        run: |
-          sleep 10 &&
-          node CustomBuildReducer.mjs
-          npm install --global vercel@latest
-          vercel deploy dist/static-coveraged --prod --token=${{ secrets.VERCEL_TOKEN }}
+          node CustomBuildReducer.mjs && vercel deploy dist/static-coveraged --prod --token=${{ secrets.VERCEL_TOKEN }}
