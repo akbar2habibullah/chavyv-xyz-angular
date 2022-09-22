@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "14"
       - name: Build Angular and scully
-      - shell: bash
+        shell: bash
         run: |
           npm install
           npm run build
