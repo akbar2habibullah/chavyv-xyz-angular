@@ -15,10 +15,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - run: npm install
-      - run: npm run build
-      - run: npm run scully
-      - run: npm run scully:serve
+      - name: Build Angular and scully
+      - shell: bash
+        run: |
+          npm install
+          npm run build
+          npm run scully
+          npm run scully:serve
       - name: Custom Build and deploy
         shell: bash
         run: |
