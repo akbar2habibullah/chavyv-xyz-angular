@@ -8,3 +8,15 @@ html {
   overflow-x: hidden;
   text-align: center;
 }
+
+#toggle:checked ~ #content-toggle {
+  display: block !important;
+}
+
+#btn-toggle::after {
+  content: " Open 👀";
+}
+
+#toggle:checked ~ #btn-toggle::after {
+  content: " Close 🙌";
+}

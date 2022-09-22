@@ -18,5 +18,11 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run scully
-      - run: npm install --global vercel@latest
-      - run: vercel deploy dist/static --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - run: npm run scully:serve
+      - name: Custom Build and deploy
+        shell: bash
+        run: |
+          sleep 10 &&
+          node CustomBuildReducer.mjs
+          npm install --global vercel@latest
+          vercel deploy dist/static-coveraged --prod --token=${{ secrets.VERCEL_TOKEN }}

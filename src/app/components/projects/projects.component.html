@@ -1,38 +1,48 @@
 <section id="projects" class="mb-10 space-y-4">
   <h2 class="text-3xl font-medium">My Several Projects:</h2>
-  <h3
-    (click)="toggleShow()"
-    class="px-5 py-3 font-bold text-xl cursor-pointer rounded text-main-light-color dark:text-dark-charcoal bg-secondary-dark-color hover:scale-110 hover:text-secondary-dark-color dark:hover:text-secondary-dark-color hover:bg-transparent transition-all ease-in"
-  >
-    {{ show ? "> Close 🙌" : "> Open 👀" }}
-  </h3>
-  <div *ngIf="show" class="space-y-4">
-    <div *ngFor="let project of projects" class="relative">
-      <img
-        src="{{ project.picture[0].url }}"
-        alt="{{ project.title }} screenshoot"
-        width="640"
-        height="308"
-      />
-      <div class="bg-transparent w-100 h-[300px] absolute"></div>
-      <div (mouseover)="mouseOver(project.id)" (mouseleave)="mouseOut()">
-        <div
-          [@hover]="hoverId === project.id ? 'mouseOut' : 'mouseIn'"
-          class="absolute bottom-0 inset-x-0 bg-dark-shade-gray/70 px-7 py-5 text-center"
-        >
-          <p class="text-white">
-            {{ project.description }}
-          </p>
-        </div>
-        <div
-          [@hover]="hoverId === project.id ? 'mouseIn' : 'mouseOut'"
-          class="absolute bottom-0 inset-x-0 bg-dark-shade-gray/70 px-7 py-5 text-center"
-        >
-          <a href="{{ project.link }}" rel="noreferrer" target="_blank">
-            <h3 class="text-white font-medium">
-              {{ project.title }}
-            </h3>
-          </a>
+  <div class="relative flex flex-col space-y-4">
+    <input type="checkbox" id="toggle" class="absolute opacity-0" />
+    <label
+      for="toggle"
+      id="btn-toggle"
+      class="px-5 py-3 font-bold text-xl cursor-pointer rounded text-main-light-color dark:text-dark-charcoal bg-secondary-dark-color hover:scale-110 hover:text-secondary-dark-color dark:hover:text-secondary-dark-color hover:bg-transparent transition-all ease-in"
+    >
+      >
+    </label>
+    <div class="space-y-4 block hidden" id="content-toggle">
+      <div id="css-keyframes" data="null"></div>
+      <div *ngFor="let project of projects" class="relative">
+        <div id="css-{{ project.id }}" data="null"></div>
+        <img
+          src="{{ project.picture[0].url }}"
+          alt="{{ project.title }} screenshoot"
+          width="640"
+          height="320"
+          style="aspect-ratio: 18/9"
+        />
+        <div class="bg-transparent w-100 h-[300px] absolute"></div>
+        <div id="{{ 'project-card-' + project.id }}">
+          <div
+            class="absolute bottom-0 inset-x-0 bg-dark-shade-gray/70 px-7 py-5 text-center"
+          >
+            <label class="text-white">
+              {{ project.description }}
+            </label>
+          </div>
+          <div
+            class="absolute bottom-0 inset-x-0 bg-dark-shade-gray/70 px-7 py-5 text-center"
+          >
+            <a
+              href="{{ project.link }}"
+              rel="noreferrer"
+              target="_blank"
+              name="{{ project.title }} link"
+            >
+              <h3 class="text-white font-medium">
+                {{ project.title }}
+              </h3>
+            </a>
+          </div>
         </div>
       </div>
     </div>
