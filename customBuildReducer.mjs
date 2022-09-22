@@ -34,7 +34,7 @@ async function checkCoverage() {
     const page = await context.newPage();
     await page.coverage.startCSSCoverage();
 
-    await page.goto("http://localhost:1668/");
+    await page.goto("http://localhost:1668/", { waitUntil: "networkidle" });
     await page.waitForTimeout(5000);
 
     await page.locator("[aria-label='Timeline']").click();
