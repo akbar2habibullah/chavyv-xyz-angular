@@ -158,7 +158,7 @@ function removeScriptCall() {
         "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
         "headline": "Hello, my name is Habibullah Akbar! but you can call me Habib 🙌",
         "description": "This is my personal website for portofolio showcase built by Angular, Tailwind, NgRx, and Scully",
-        "dateModified": "${new Date().toISOString()},
+        "dateModified": "${new Date().toISOString()}",
         "significantLink": [
           "https://blog.chavyv.com"
         ],
