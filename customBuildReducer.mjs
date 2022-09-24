@@ -83,6 +83,13 @@ function reduceUnusedCode() {
         }
       }
     );
+    copyFile(
+      resolve(__dirname, "dist/static" + entry + ".map"),
+      resolve(__dirname, "dist/static-coveraged" + entry + ".map"),
+      (err) => {
+        if (err) console.log(err);
+      }
+    );
   });
 }
 
@@ -175,7 +182,7 @@ function removeScriptCall() {
     </script>
   `;
 
-  const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' img-src 'self' https://media.graphassets.com">`;
+  const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; img-src 'self' https://media.graphassets.com">`;
 
   readFile("dist/static/index.html", function (err, data) {
     const new_html = new String(data)
