@@ -136,9 +136,23 @@ function copyAssets() {
 
 function removeScriptCall() {
   // body omitted
+  const injectScript = `
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/ngsw-worker.js').then((registration) => {}, 
+        (error) => {
+          console.error('Service worker registration failed: ' + error);
+        });
+      } else {
+        console.error('Service workers are not supported.');
+      }
+    </script>
+  `;
 
   readFile("dist/static/index.html", function (err, data) {
-    const new_html = new String(data).replace(/<script(.*?)<\/script>/g, "");
+    const new_html = new String(data)
+      .replace(/<script(.*?)<\/script>/g, "")
+      .replace(/<web-worker><\/web-worker>/g, injectScript);
     writeFile("dist/static-coveraged/index.html", new_html, (err) => {
       console.log(err);
     });

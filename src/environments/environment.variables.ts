@@ -43,9 +43,9 @@ export const environment = {
   `,
   contactsInfo: {
     email: 'akbar2habibullah@gmail.com',
-    instagram: 'chavyv.akvar',
-    twitter: 'ChavyvAkvar',
-    linkedinURL: 'https://instagram.com/chavyv.akvar',
+    instagram: 'fteroti.nemesis',
+    twitter: 'FterotiNemesis',
+    linkedinURL: 'https://www.linkedin.com/in/habibullah-akbar-631880179/',
     github: 'akbar2habibullah',
     gitlab: 'akbar2habibullah',
   },

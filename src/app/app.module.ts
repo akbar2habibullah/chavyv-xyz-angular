@@ -7,6 +7,7 @@ import { InMemoryCache } from '@apollo/client/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppComponent } from './app.component';
 import { CmsEffects } from './cms/cms.effects';
@@ -47,6 +48,12 @@ import { environment } from 'src/environments/environment.variables';
     EffectsModule.forRoot([CmsEffects]),
     FontAwesomeModule,
     ScullyLibModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: true,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [
     {
