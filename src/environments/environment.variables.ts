@@ -51,6 +51,10 @@ export const environment = {
   },
   siteMetaData: [
     {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0',
+    },
+    {
       name: 'description',
       content:
         'This is my personal website for portofolio showcase built by Angular, Tailwind, NgRx, and Scully',
@@ -67,14 +71,6 @@ export const environment = {
     {
       name: 'theme-color',
       content: '#444', // Set a custom theme color for the address bar
-    },
-    {
-      'http-equiv': 'Content-Security-Policy',
-      content: "default-src 'self'",
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1.0',
     },
   ],
 };
