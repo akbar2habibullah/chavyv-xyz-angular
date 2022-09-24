@@ -173,6 +173,22 @@ function removeScriptCall() {
         "url": "http://chavyv.xyz"
       }
     </script>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#444" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
+    <meta
+      name="description"
+      content="This is my personal website for portofolio showcase built by Angular, Tailwind, NgRx, and Scully"
+    />
+    <meta
+      name="keywords"
+      content="chavyv, akvar, chavyv akvar, habibullah akbar, habib akbar, software engineer, web developer, frontend developer, javascript developer, indonesia"
+    />
+    <meta name="author" content="Habibullah Akbar" />
   `;
 
   readFile("dist/static/index.html", function (err, data) {
