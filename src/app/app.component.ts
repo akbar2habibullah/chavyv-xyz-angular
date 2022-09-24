@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { Store } from '@ngrx/store';
 
 import * as CmsSelectors from './cms/cms.selectors';
 import * as CmsActions from './cms/cms.actions';
+import { environment } from 'src/environments/environment.variables';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,8 @@ export class AppComponent {
   data: any = null;
 
   constructor(
-    private store: Store<{ loading: boolean; data: any; error: string }>
+    private store: Store<{ loading: boolean; data: any; error: string }>,
+    private meta: Meta
   ) {}
 
   ngOnInit() {
