@@ -175,7 +175,7 @@ function removeScriptCall() {
     </script>
   `;
 
-  const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'img-src'">`;
+  const csp = `<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' img-src 'self' https://media.graphassets.com">`;
 
   readFile("dist/static/index.html", function (err, data) {
     const new_html = new String(data)
