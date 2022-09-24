@@ -149,9 +149,36 @@ function removeScriptCall() {
     </script>
   `;
 
+  const structureData = `
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Chavyv Web",
+        "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
+        "headline": "Hello, my name is Habibullah Akbar! but you can call me Habib 🙌",
+        "description": "This is my personal website for portofolio showcase built by Angular, Tailwind, NgRx, and Scully",
+        "dateModified": "${new Date().toISOString()},
+        "significantLink": [
+          "https://blog.chavyv.com"
+        ],
+        "mainEntity":{
+          "@type": "Person",
+          "name": "Habibullah Akbar",
+          "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
+          "jobTitle": "Frontend Developer",
+          "email": "akbar2habibullah@gmail.com",
+          "gender" "Male"
+        },
+        "url": "http://chavyv.xyz"
+      }
+    </script>
+  `;
+
   readFile("dist/static/index.html", function (err, data) {
     const new_html = new String(data)
       .replace(/<script(.*?)<\/script>/g, "")
+      .replace(/<structure-data><\/structure-data>/g, structureData)
       .replace(/<web-worker><\/web-worker>/g, injectScript);
     writeFile("dist/static-coveraged/index.html", new_html, (err) => {
       console.log(err);
