@@ -175,7 +175,7 @@ function removeScriptCall() {
           "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
           "jobTitle": "Frontend Developer",
           "email": "akbar2habibullah@gmail.com",
-          "gender" "Male"
+          "gender": "Male"
         },
         "url": "http://chavyv.xyz"
       }
