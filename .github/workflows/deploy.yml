@@ -24,5 +24,9 @@ jobs:
         run: |
           npm run scully:serve &
           sleep 5 && node customBuildReducer.mjs
-      - name: Publish app
-        run: CLOUDFLARE_ACCOUNT_ID=${{ secrets.CF_ACCOUNT_ID }} npx wrangler pages publish dist/static-coveraged --project-name=chavyv-xyz-angular --commit-dirty=true
+      - name: Publish
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          directory: ./dist/static-coveraged
