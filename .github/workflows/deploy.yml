@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - run: npm install --global vercel@latest
       - run: npm install
       - run: npm run build
       - run: npm run scully
@@ -30,5 +29,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages publish --project-name=chavyv-xyz-angular
-          workingDirectory: "dist/static-coveraged"
+          command: pages publish dist/static-coveraged --project-name=chavyv-xyz-angular
