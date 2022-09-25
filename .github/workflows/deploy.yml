@@ -9,6 +9,9 @@ jobs:
   build-angular-and-scully-and-deploy:
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
+      deployments: write
     env:
       CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -31,3 +34,4 @@ jobs:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: chavyv-xyz-angular
           directory: ./dist/static-coveraged
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
