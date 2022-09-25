@@ -35,4 +35,4 @@ jobs:
           projectName: chavyv-xyz-angular
           directory: ./dist/static-coveraged
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          production: true
+          branch: main
