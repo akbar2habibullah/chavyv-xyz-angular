@@ -21,7 +21,7 @@ export const environment = {
           hex
         }
       }
-      timelines(orderBy: fromDate_DESC) {
+      timelines(orderBy: fromDate_DESC, first: 100) {
         title
         fromDate
         toDate
@@ -43,7 +43,7 @@ export const environment = {
   `,
   contactsInfo: {
     email: 'akbar2habibullah@gmail.com',
-    instagram: 'fteroti.nemesis',
+    instagram: 'chavyv.akvar',
     twitter: 'FterotiNemesis',
     linkedinURL: 'https://www.linkedin.com/in/habibullah-akbar-631880179/',
     github: 'akbar2habibullah',
