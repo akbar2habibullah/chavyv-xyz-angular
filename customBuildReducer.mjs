@@ -16,7 +16,6 @@ let css_list = new Set();
 let css_file = {};
 
 async function checkCoverage() {
-  // body omitted
   const iphone12 = devices["iPhone 12"];
   const pixel = devices["Pixel 3"];
   const ipad = devices["iPad Mini"];
