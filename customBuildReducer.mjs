@@ -40,7 +40,7 @@ async function checkCoverage() {
     await page.locator("text=About Me").click();
     await page.locator("text=> Get my Resume").hover();
     await page.locator("text=UI Slicing with HTML5, SASS, & JSX").hover();
-    await page.locator("text=Stockifi.io").click();
+    await page.locator("text=RoamStayAsia").click();
     await page.locator("#btn-toggle").click();
     await page
       .locator("[name='Odigo Landing Page link']")
