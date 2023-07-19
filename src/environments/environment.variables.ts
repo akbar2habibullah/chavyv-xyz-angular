@@ -1,4 +1,5 @@
 // All of the environment variables are defined here. If you're willing to customize this project to your own, you can do it here.
+// trigger deployment
 
 export const environment = {
   graphQLUrl:
