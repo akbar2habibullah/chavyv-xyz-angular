@@ -46,7 +46,7 @@ async function checkCoverage() {
       .locator("[name='Odigo Landing Page link']")
       .hover({ force: true });
     await page.locator("#btn-toggle").click();
-    await page.locator("[aria-label='Email']").click();
+    await page.locator("[aria-label='Instagram']").click();
     await page.locator("[aria-label='Scully']").hover();
 
     const tmp = await page.coverage.stopCSSCoverage();
