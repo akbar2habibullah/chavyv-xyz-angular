@@ -2,13 +2,18 @@
   id="resume"
   class="flex flex-col items-center space-y-5 px-4 py-8 md:px-12 md:py-16 mb-10 bg-[#e9ecef] dark:bg-dark-shade-gray rounded-lg dark:text-white"
 >
-  <img
-    src="{{ image }}"
-    class="rounded-full w-[270px] h-[270px] aspect-square"
-    loading="eager"
-    fetchpriority="high"
-    alt="My profile picture"
-  />
+  <div class="container-iframe">
+    <iframe
+      class="responsive-iframe"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/ssKgjqJsZKw"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
   <h2 class="font-light text-7xl">
     Hello, my name is
     <span class="text-secondary-dark-color bg:black text-medium">Habib</span

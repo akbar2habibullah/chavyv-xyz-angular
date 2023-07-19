@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
   faInstagram,
-  faTwitter,
   faLinkedin,
   faGithub,
   faGitlab,
+  faYoutube,
+  faTiktok,
 } from '@fortawesome/free-brands-svg-icons';
 import { environment } from '../../../environments/environment.variables';
 
@@ -15,12 +15,12 @@ import { environment } from '../../../environments/environment.variables';
   styleUrls: ['./contacts.component.css'],
 })
 export class ContactsComponent implements OnInit {
-  envelope = faEnvelope;
   instagram = faInstagram;
-  twitter = faTwitter;
   linkedin = faLinkedin;
   github = faGithub;
   gitlab = faGitlab;
+  youtube = faYoutube;
+  tiktok = faTiktok;
 
   contactsInfo = environment.contactsInfo;
 

@@ -4,15 +4,6 @@
     class="flex flex-wrap justify-center text-secondary-dark-color max-w-sm md:max-w-lg mx-auto my-5"
   >
     <a
-      href="mailto:{{ contactsInfo.email }}"
-      rel="noreferrer"
-      target="_blank"
-      aria-label="Email"
-      class="hover:text-main-dark-color hover:scale-110 dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
-    >
-      <fa-icon [icon]="envelope" size="3x"></fa-icon
-    ></a>
-    <a
       href="https://instagram.com/{{ contactsInfo.instagram }}"
       rel="noreferrer"
       target="_blank"
@@ -21,12 +12,21 @@
       ><fa-icon [icon]="instagram" size="3x"></fa-icon
     ></a>
     <a
-      href="https://twitter.com/{{ contactsInfo.twitter }}"
+      href="https://www.youtube.com/{{ contactsInfo.youtube }}"
       rel="noreferrer"
       target="_blank"
-      aria-label="Twitter"
+      aria-label="YouTube"
       class="hover:text-main-dark-color hover:scale-110 dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
-      ><fa-icon [icon]="twitter" size="3x"></fa-icon
+      ><fa-icon [icon]="youtube" size="3x"></fa-icon
+    ></a>
+    <a
+      href="https://www.tiktok.com/{{ contactsInfo.tiktok }}"
+      rel="noreferrer"
+      target="_blank"
+      aria-label="TikTok"
+      class="hover:text-main-dark-color hover:scale-110 dark:hover:text-main-light-color transition-all ease-in mx-4 my-2"
+    >
+      <fa-icon [icon]="tiktok" size="3x"></fa-icon
     ></a>
     <a
       href="{{ contactsInfo.linkedinURL }}"

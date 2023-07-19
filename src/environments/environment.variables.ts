@@ -42,12 +42,12 @@ export const environment = {
     }
   `,
   contactsInfo: {
-    email: 'akbar2habibullah@gmail.com',
     instagram: 'chavyv.akvar',
-    twitter: 'FterotiNemesis',
     linkedinURL: 'https://www.linkedin.com/in/habibullah-akbar-631880179/',
     github: 'akbar2habibullah',
     gitlab: 'akbar2habibullah',
+    youtube: '@ChavyvAkvar',
+    tiktok: '@chavyv.akvar',
   },
   siteMetaData: [
     {
