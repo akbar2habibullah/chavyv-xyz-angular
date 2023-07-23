@@ -140,6 +140,15 @@ function copyAssets() {
   );
 }
 
+function copyAdsTxt() {
+  const new_dir = resolve(__dirname, "./src/assets");
+  const static_dir = resolve(__dirname, "./dist/static");
+
+  copyFile(static_dir + "/ads.txt", new_dir + "/ads.txt", (err) => {
+    if (err) console.log(err);
+  });
+}
+
 function removeScriptCall() {
   // body omitted
   const injectScript = `
@@ -204,4 +213,5 @@ checkCoverage().then(() => {
   reduceUnusedCode();
   copyStatic();
   copyAssets();
+  copyAdsTxt();
 });
