@@ -153,6 +153,7 @@ function removeScriptCall() {
         console.error('Service workers are not supported.');
       }
     </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332540412665152" crossorigin="anonymous"></script>
   `;
 
   const structureData = `
