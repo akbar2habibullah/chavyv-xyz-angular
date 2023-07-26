@@ -141,8 +141,8 @@ function copyAssets() {
 }
 
 function copyAdsTxt() {
-  const new_dir = "./dist/static-coveraged/assets";
-  const static_dir = "./dist/static-coveraged/";
+  const new_dir = "./dist/static-coveraged/";
+  const static_dir = "./dist/static-coveraged/assets";
 
   copyFile(static_dir + "/ads.txt", new_dir + "/ads.txt", (err) => {
     if (err) console.log(err);
