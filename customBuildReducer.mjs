@@ -66,7 +66,7 @@ async function checkCoverage() {
 
 function reduceUnusedCode() {
   // body omitted
-  const new_dir = resolve(__dirname, "dist/static-coveraged");
+  const new_dir = "./dist/static-coveraged";
 
   if (!existsSync(new_dir)) {
     mkdirSync(new_dir);
@@ -83,8 +83,8 @@ function reduceUnusedCode() {
       }
     );
     copyFile(
-      resolve(__dirname, "dist/static" + entry + ".map"),
-      resolve(__dirname, "dist/static-coveraged" + entry + ".map"),
+      "./dist/static" + entry + ".map",
+      "./dist/static-coveraged" + entry + ".map",
       (err) => {
         if (err) console.log(err);
       }
@@ -94,8 +94,8 @@ function reduceUnusedCode() {
 
 function copyStatic() {
   // body omitted
-  const new_dir = resolve(__dirname, "./dist/static-coveraged");
-  const static_dir = resolve(__dirname, "./dist/static");
+  const new_dir = "./dist/static-coveraged";
+  const static_dir = "./dist/static";
 
   readdir(static_dir, { withFileTypes: true }, (err, files) => {
     if (files)
@@ -123,8 +123,8 @@ function copyStatic() {
 
 function copyAssets() {
   // body omitted
-  const source = "dist/static/assets";
-  const destination = "dist/static-coveraged/assets";
+  const source = "./dist/static/assets";
+  const destination = "./dist/static-coveraged/assets";
 
   copy(
     resolve(__dirname, source),
@@ -141,8 +141,8 @@ function copyAssets() {
 }
 
 function copyAdsTxt() {
-  const new_dir = resolve(__dirname, "dist/static-coveraged/assets");
-  const static_dir = resolve(__dirname, "dist/static-coveraged");
+  const new_dir = "./dist/static-coveraged/assets";
+  const static_dir = "./dist/static-coveraged/";
 
   copyFile(static_dir + "/ads.txt", new_dir + "/ads.txt", (err) => {
     if (err) console.log(err);
