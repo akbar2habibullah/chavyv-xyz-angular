@@ -40,7 +40,9 @@ async function checkCoverage() {
     await page.locator("text=About Me").click();
     await page.locator("text=> Get my Resume").hover();
     await page.locator("text=UI Slicing with HTML5, SASS, & JSX").hover();
-    await page.locator("text=Work as Frontend Engineer at RoamStayAsia").click();
+    await page
+      .locator("text=Work as Frontend Engineer at RoamStayAsia")
+      .click();
     await page.locator("#btn-toggle").click();
     await page
       .locator("[name='Odigo Landing Page link']")
@@ -162,7 +164,6 @@ function removeScriptCall() {
         console.error('Service workers are not supported.');
       }
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332540412665152" crossorigin="anonymous"></script>
   `;
 
   const structureData = `
@@ -170,7 +171,7 @@ function removeScriptCall() {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Chavyv Web",
+        "name": "Chavyv Akvar Web",
         "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
         "headline": "Hello, my name is Habibullah Akbar! but you can call me Habib 🙌",
         "description": "This is my personal website for portofolio showcase built by Angular, Tailwind, NgRx, and Scully",
@@ -182,7 +183,7 @@ function removeScriptCall() {
           "@type": "Person",
           "name": "Habibullah Akbar",
           "image": "https://chavyv.xyz/assets/icons/android-chrome-512x512.png",
-          "jobTitle": "Frontend Developer",
+          "jobTitle": "Software Engineer",
           "email": "akbar2habibullah@gmail.com",
           "gender": "Male"
         },
