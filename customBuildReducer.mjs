@@ -39,7 +39,7 @@ async function checkCoverage() {
     await page.locator("[aria-label='Timeline']").click();
     await page.locator("text=About Me").click();
     await page.locator("text=> Get my Resume").hover();
-    await page.locator("text=UI Slicing with HTML5, SASS, & JSX").hover();
+    await page.locator("text=Creative Writing").hover();
     await page
       .locator("text=Work as Frontend Engineer at RoamStayAsia")
       .click();
