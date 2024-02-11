@@ -32,7 +32,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: chavyv-xyz-angular
+          projectName: chavyv
           directory: ./dist/static-coveraged
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: main
