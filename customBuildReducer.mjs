@@ -164,7 +164,6 @@ function removeScriptCall() {
         console.error('Service workers are not supported.');
       }
     </script>
-    <script async src="https://cdn.splitbee.io/sb.js"></script>
   `;
 
   const structureData = `
@@ -191,6 +190,7 @@ function removeScriptCall() {
         "url": "http://chavyv.xyz"
       }
     </script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
   `;
 
   readFile("dist/static/index.html", function (err, data) {
