@@ -9,3 +9,6 @@ export const config: ScullyConfig = {
   defaultPostRenderers: [],
   routes: {},
 };
+  puppeteerLaunchOptions: {
+    args: ['--serverTimeout=60000'], // Add the --serverTimeout=x option to increase the timeout for Playwright
+  },
